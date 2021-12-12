@@ -14,4 +14,4 @@
     3.2 test 单测：rocketMQ、rocketMQ in spring  (@RocketMQTransactionListener)全局只能有一个
     3.3 增加相应的方法，引入流水，根据流水状态来判断mq.mq收到消息就会执行相关操作（一般是对DB的更改）
 
-4 微服务
+4 微服务 b
