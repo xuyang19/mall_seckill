@@ -2,6 +2,8 @@
 本项目是电商项目中的秒杀模块：
 主要是实现用户登录、注册、秒杀、下单操作
 适用于编程经验较少的同学入门、也可以用来当做找实习、工作的一个项目
+技术栈：springboot、spring、mybatis、springmvc、mysql、redis、rocketMQ、maven、git等
+前端轻量级框架：bootstrap
 
 
 1 第一版：完成登录注册和秒杀购买的基本功能
