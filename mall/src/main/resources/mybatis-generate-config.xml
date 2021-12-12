@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="simple" targetRuntime="MyBatis3Simple">
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://106.14.71.219:3306/seckill?characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Hongkong"
+                        userId="root" password="123456"/>
+
+        <javaModelGenerator targetPackage="com.nowcoder.mall.entity" targetProject="src/main/java">
+            <property name="trimStrings" value="true" />
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="mappers" targetProject="src/main/resources"/>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.nowcoder.mall.dao" targetProject="src/main/java"/>
+
+        <table tableName="item" domainObjectName="Item"
+               enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
+            <generatedKey column="ID" sqlStatement="MYSQL" identity="true" />
+            <columnOverride column="price" jdbcType="DECIMAL" javaType="java.math.BigDecimal" />
+        </table>
+        <table tableName="item_stock" domainObjectName="ItemStock"
+               enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
+            <generatedKey column="ID" sqlStatement="MYSQL" identity="true" />
+        </table>
+        <table tableName="user_info" domainObjectName="User"
+               enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
+            <generatedKey column="ID" sqlStatement="MYSQL" identity="true" />
+        </table>
+        <table tableName="promotion" domainObjectName="Promotion"
+               enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
+            <generatedKey column="ID" sqlStatement="MYSQL" identity="true" />
+            <columnOverride column="promotion_price" jdbcType="DECIMAL" javaType="java.math.BigDecimal" />
+            <columnOverride column="start_time" jdbcType="TIMESTAMP" javaType="java.sql.Timestamp" />
+            <columnOverride column="end_time" jdbcType="TIMESTAMP" javaType="java.sql.Timestamp" />
+        </table>
+        <table tableName="order_info" domainObjectName="Order"
+               enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
+            <columnOverride column="order_price" jdbcType="DECIMAL" javaType="java.math.BigDecimal" />
+            <columnOverride column="order_total" jdbcType="DECIMAL" javaType="java.math.BigDecimal" />
+            <columnOverride column="order_time" jdbcType="TIMESTAMP" javaType="java.sql.Timestamp" />
+        </table>
+        <table tableName="serial_number" domainObjectName="SerialNumber"
+               enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
+        </table>
+        <table tableName="item_stock_log" domainObjectName="ItemStockLog"
+               enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false" >
+        </table>
+    </context>
+</generatorConfiguration>
