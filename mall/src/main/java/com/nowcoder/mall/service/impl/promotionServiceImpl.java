@@ -49,7 +49,7 @@ public class promotionServiceImpl implements PromotionService, ErrorCode {
             return null;
         }
 
-         // 5 校验活动
+         // 5 校验活动  知道
         if(item.getPromotion() == null ||
             !item.getPromotion().getId().equals(promotionId) ||
             item.getPromotion().getStatus() != 0){
